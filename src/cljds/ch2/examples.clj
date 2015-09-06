@@ -73,7 +73,7 @@
   (let [may-1 (f/parse-local-date "2015-05-01")]
     (->> (load-data "dwell-times.tsv")
          (with-parsed-date)
-         (i/$where {:date {:$eq may-1}})
+         (filtered-times {:date {:$eq may-1}})
          (standard-error))))
 
 (defn ex-2-9 []
