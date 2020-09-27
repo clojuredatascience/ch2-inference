@@ -3,7 +3,7 @@
             [cljds.ch2.models :refer [state]]
             [cljds.ch2.stats :as s]
 
-            [reagent.core :as r]
+            [reagent.dom :as d]
             [b1.charts :as c]
             [b1.svg :as svg]))
 
@@ -84,6 +84,6 @@
        [sample-means sample-a sample-b alpha]]]]))
 
 (defn run []
-  (r/render-component
+  (d/render
    [layout-interface]
    (.getElementById js/document "root")))
